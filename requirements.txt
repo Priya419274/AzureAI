@@ -3,3 +3,4 @@ langchain_experimental
 azure-storage-blob 
 openpyxl 
 pandas
+flask
