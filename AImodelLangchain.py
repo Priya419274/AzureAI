@@ -53,5 +53,5 @@ def cust():
     return outcome
  
 if __name__ == '__main__':
-  print(f'Public URL is : {public_url}')
+ # print(f'Public URL is : {public_url}')
   app.run()
