@@ -1,0 +1,5 @@
+langchain_openai 
+langchain_experimental 
+azure-storage-blob 
+openpyxl 
+pandas
