@@ -12,10 +12,10 @@ from flask import Flask, request
 # os.environ["OPENAI_API_KEY"] = "sk-ePEcgDG72z4phj13x8kyoK-mkqnRFvr8DHAmwgMFnvT3BlbkFJbJRtDVhV14wq_tkZ1GcXdjATXh-Gz-HHY2-69YsLYA"
 
 # Azure Storage account details
-# storage_account_name = 'eipocstorageaccount'
-# storage_account_key = 'aO3kERXNDK27DHalRQ1o7QAo4uBXiYlx6T7eKBA13Qbv8uL7jSjVWJJJn8/98A04CpYynnUf6Ndy+AStfmANtA=='
-# container_name = 'eipocstogragecontainer'
-# blob_name = 'Data Set Sample.csv'
+storage_account_name = 'eipocstorageaccount'
+storage_account_key = 'aO3kERXNDK27DHalRQ1o7QAo4uBXiYlx6T7eKBA13Qbv8uL7jSjVWJJJn8/98A04CpYynnUf6Ndy+AStfmANtA=='
+container_name = 'eipocstogragecontainer'
+blob_name = 'Data Set Sample.csv'
 
 app = Flask(__name__)
 
@@ -51,6 +51,7 @@ def cust():
     # Invoke the agent with your query
     outcome = agent_executer.invoke(questions)
     '''
+    
     return csv_data
 
 if __name__ == "__main__":
