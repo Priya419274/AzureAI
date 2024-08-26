@@ -20,7 +20,7 @@ blob_name = 'Data Set Sample.csv'
  
 app = Flask(__name__)
  
-port_no = 8000
+#port_no = 8000
  
 #ngrok.set_auth_token('2l3RJV2ej50XCIEljjjgUpDwEaQ_6Jd1KWPTk4Ee4zaUCP3D7')
 #public_url = ngrok.connect(port_no).public_url
