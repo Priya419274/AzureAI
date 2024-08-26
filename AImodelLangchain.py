@@ -9,7 +9,7 @@ from flask import Flask, request
 # from pyngrok import ngrok
 
 # Set your OpenAI API Key
-# os.environ["OPENAI_API_KEY"] = "sk-ePEcgDG72z4phj13x8kyoK-mkqnRFvr8DHAmwgMFnvT3BlbkFJbJRtDVhV14wq_tkZ1GcXdjATXh-Gz-HHY2-69YsLYA"
+os.environ["OPENAI_API_KEY"] = "sk-ePEcgDG72z4phj13x8kyoK-mkqnRFvr8DHAmwgMFnvT3BlbkFJbJRtDVhV14wq_tkZ1GcXdjATXh-Gz-HHY2-69YsLYA"
 
 # Azure Storage account details
 storage_account_name = 'eipocstorageaccount'
@@ -29,7 +29,6 @@ def cust():
     # Inputs from boomi - Question
     questions = request.form['Ques']
  
-    
     # Create a BlobServiceClient and download the CSV
     blob_service_client = BlobServiceClient(account_url=f"https://{storage_account_name}.blob.core.windows.net", credential=storage_account_key)
     blob_client = blob_service_client.get_blob_client(container=container_name, blob=blob_name)
@@ -41,7 +40,6 @@ def cust():
     # Convert the DataFrame to CSV format (in memory)
     csv_data = df.to_csv(index=False)
     
-    '''
     # Create the language model with OpenAI
     llm = ChatOpenAI(temperature=0.5)
 
@@ -50,9 +48,8 @@ def cust():
 
     # Invoke the agent with your query
     outcome = agent_executer.invoke(questions)
-    '''
     
-    return csv_data
+    return outcome
 
 if __name__ == "__main__":
     # print(f'Public URL is : {public_url}')
