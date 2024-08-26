@@ -4,3 +4,4 @@ azure-storage-blob
 openpyxl 
 pandas
 flask
+tabulate
