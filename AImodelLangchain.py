@@ -27,7 +27,7 @@ app = Flask(__name__)
 @app.route("/customer_details", methods=["POST"])
 def cust():
     # Inputs from boomi - Question
-    #questions = request.form['Ques']
+    questions = request.form['Ques']
  
     '''
     # Create a BlobServiceClient and download the CSV
@@ -50,7 +50,7 @@ def cust():
     # Invoke the agent with your query
     outcome = agent_executer.invoke(questions)
     '''
-    return "Hi AzureAI"
+    return questions
 
 if __name__ == "__main__":
     # print(f'Public URL is : {public_url}')
