@@ -54,4 +54,4 @@ def cust():
 
 if __name__ == '__main__':
     # print(f'Public URL is : {public_url}')
-    app.run(port=8090, host='0.0.0.0')
+    app.run(host='0.0.0.0', port=8090)
