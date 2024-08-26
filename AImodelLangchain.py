@@ -27,7 +27,8 @@ app = Flask(__name__)
 @app.route("/customer_details", methods=["POST"])
 def cust():
     # Inputs from boomi - Question
-    questions = request.form['Ques']
+    data = request.get_json()
+    questions = data.get('Ques')
  
     # Create a BlobServiceClient and download the CSV
     blob_service_client = BlobServiceClient(account_url=f"https://{storage_account_name}.blob.core.windows.net", credential=storage_account_key)
