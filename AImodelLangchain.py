@@ -24,10 +24,10 @@ app = Flask(__name__)
 # ngrok.set_auth_token('2l3RJV2ej50XCIEljjjgUpDwEaQ_6Jd1KWPTk4Ee4zaUCP3D7')
 # public_url = ngrok.connect(port_no).public_url
 
-@app.route('/customer_details', methods=['POST'])
+@app.route("/customer_details", methods=["POST"])
 def cust():
     # Inputs from boomi - Question
-    questions = request.form['Ques']
+    #questions = request.form['Ques']
  
     '''
     # Create a BlobServiceClient and download the CSV
@@ -50,8 +50,8 @@ def cust():
     # Invoke the agent with your query
     outcome = agent_executer.invoke(questions)
     '''
-    return questions
+    return "Hi AzureAI"
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # print(f'Public URL is : {public_url}')
-    app.run(host='0.0.0.0', port=8090)
+    app.run(debug=True,host="0.0.0.0", port=8000)
