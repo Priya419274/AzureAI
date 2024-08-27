@@ -9,7 +9,7 @@ from flask import Flask, request
 # from pyngrok import ngrok
 
 # Set your OpenAI API Key
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 # Azure Storage account details
 storage_account_name = 'eipocstorageaccount'
